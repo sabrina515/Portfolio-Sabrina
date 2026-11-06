@@ -82,65 +82,61 @@
     .section-title em { font: italic 400 1.04em var(--serif); letter-spacing: -.06em; }
     .section-note { max-width: 225px; color: var(--muted); font-size: 12px; line-height: 1.7; margin: 7px 0 0; }
     .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 10vw; }
-.about-stamp {
-  min-height: 310px;
-  background: var(--sage);
-  color: #f4f2ec;
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-
-.about-stamp::before,
-.about-stamp::after {
-  content: "";
-  position: absolute;
-  border: 1px solid rgba(255,255,255,.24);
-  border-radius: 50%;
-  width: 260px;
-  height: 260px;
-  right: -95px;
-  bottom: -105px;
-  pointer-events: none;
-}
-
-.about-stamp::after {
-  width: 190px;
-  height: 190px;
-  right: -60px;
-  bottom: -70px;
-}
-.profile-photo {
-  width: 230px;
-  height: 250px;
-  object-fit: cover;
-  object-position: center 30%;
-  border-radius: 85px 85px 8px 8px;
-  display: block;
-  position: relative;
-  z-index: 1;
-  filter: grayscale(15%);
-  transition: transform .5s ease, filter .5s ease;
-}
-
-.profile-photo:hover {
-  transform: translateY(-5px);
-  filter: grayscale(0%);
-}
-
-.stamp-top,
-.stamp-bottom {
-  position: relative;
-  z-index: 1;
-  font-size: 10px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
+    .about-stamp {
+    min-height: 310px;
+    background: var(--sage);
+    color: #f4f2ec;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    }
+    .about-stamp::before,
+    .about-stamp::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(255,255,255,.24);
+    border-radius: 50%;
+    width: 260px;
+    height: 260px;
+    right: -95px;
+    bottom: -105px;
+    pointer-events: none;
+    }
+    .about-stamp::after {
+    width: 190px;
+    height: 190px;
+    right: -60px;
+    bottom: -70px;
+    }
+    .profile-photo {
+    width: 210px;
+    height: 230px;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 85px 85px 8px 8px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    filter: grayscale(15%);
+    transition: transform .5s ease, filter .5s ease;
+    }
+    .profile-photo:hover {
+    transform: translateY(-5px);
+    filter: grayscale(0%);
+    }
+    .stamp-top,
+    .stamp-bottom {
+    position: relative;
+    z-index: 1;
+    font-size: 10px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    }
     .stamp-top { font: 10px var(--mono); letter-spacing: .12em; text-transform: uppercase; }
     .stamp-monogram { font: italic 400 105px/.8 var(--serif); letter-spacing: -.1em; }
     .stamp-bottom { font-size: 11px; opacity: .8; }
@@ -356,7 +352,7 @@
       <div class="container">
         <div class="section-head reveal"><span class="section-index">05 / EDUCATION &amp; RECOGNITION</span><h2 class="section-title">Grounded in <em>learning.</em></h2></div>
         <div class="education-grid">
-          <article class="education-card reveal"><div class="eyebrow">2021 — 2025 · Jakarta</div><h3>Universitas Muhammadiyah Prof. Dr. Hamka</h3><p>Bachelor of Informatics Engineering (B.I.E.)</p><p class="detail">GPA 3.82 / 4.00 · Area of study: IT Project Implementation and Management</p><p class="detail">Published a Sinta 4-indexed journal article on optimizing consistency and efficiency of SIMAKIP’s frontend.</p></article>
+          <article class="education-card reveal"><div class="eyebrow">2021 — 2025 · Jakarta</div><h3>Universitas Muhammadiyah Prof. DR. HAMKA</h3><p>Bachelor of Informatics Engineering (B.I.E.)</p><p class="detail">GPA 3.82 / 4.00 · Area of study: IT Project Implementation and Management</p><p class="detail">Published a Sinta 4-indexed journal article on optimizing consistency and efficiency of SIMAKIP’s frontend.</p></article>
           <article class="education-card reveal"><div class="eyebrow">CERTIFICATIONS &amp; RECOGNITION</div><h3>Selected milestones</h3><p>TOEFL ITP — TOEFL Academy<br>BNSP — Computer Operator<br>Certiport — Microsoft Office Specialist Excel 2016</p><p class="detail">PT MRT Jakarta · Selected among the top 6 interns out of more than 58 MagangHub participants across company divisions.</p><p class="detail">BPTI UHAMKA · Selected as a technical mentor for more than five internship participants.</p></article>
         </div>
       </div>
