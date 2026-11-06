@@ -82,9 +82,67 @@
     .section-title em { font: italic 400 1.04em var(--serif); letter-spacing: -.06em; }
     .section-note { max-width: 225px; color: var(--muted); font-size: 12px; line-height: 1.7; margin: 7px 0 0; }
     .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 10vw; }
-    .about-stamp { min-height: 310px; background: var(--sage); color: #f4f2ec; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
-    .about-stamp::before, .about-stamp::after { content:""; position:absolute; border:1px solid rgba(255,255,255,.24); border-radius:50%; width:260px; height:260px; right:-95px; bottom:-105px; }
-    .about-stamp::after { width:190px; height:190px; right:-60px; bottom:-70px; }
+.about-stamp {
+  min-height: 310px;
+  background: var(--sage);
+  color: #f4f2ec;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.about-stamp::before,
+.about-stamp::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255,255,255,.24);
+  border-radius: 50%;
+  width: 260px;
+  height: 260px;
+  right: -95px;
+  bottom: -105px;
+  pointer-events: none;
+}
+
+.about-stamp::after {
+  width: 190px;
+  height: 190px;
+  right: -60px;
+  bottom: -70px;
+}
+
+/* Professional Profile Photo */
+.profile-photo {
+  width: 170px;
+  height: 190px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 85px 85px 8px 8px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  filter: grayscale(15%);
+  transition: transform .5s ease, filter .5s ease;
+}
+
+.profile-photo:hover {
+  transform: translateY(-5px);
+  filter: grayscale(0%);
+}
+
+.stamp-top,
+.stamp-bottom {
+  position: relative;
+  z-index: 1;
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
     .stamp-top { font: 10px var(--mono); letter-spacing: .12em; text-transform: uppercase; }
     .stamp-monogram { font: italic 400 105px/.8 var(--serif); letter-spacing: -.1em; }
     .stamp-bottom { font-size: 11px; opacity: .8; }
@@ -229,7 +287,19 @@
       <div class="container">
         <div class="section-head reveal"><span class="section-index">01 / ABOUT</span><h2 class="section-title">A little about <em>how I think.</em></h2><p class="section-note">A bridge between people, processes, and technology.</p></div>
         <div class="about-grid">
-          <div class="about-stamp reveal"><div class="stamp-top">Independent mind · Collaborative spirit</div><div class="stamp-monogram">sqn.</div><div class="stamp-bottom">Informatics Engineering · UHAMKA</div></div>
+          <div class="about-stamp reveal">
+          <div class="stamp-top">
+            Independent mind · Collaborative spirit
+          </div>
+            <img
+             src="assets/sabrina-profile.jpg"
+             alt="Sabrina Qodri Nova"
+             class="profile-photo"
+            />
+          <div class="stamp-bottom">
+            Informatics Engineering · UHAMKA
+          </div>
+          </div>
           <div class="about-copy reveal">
             <p>I enjoy making complex information easier to understand — and turning ideas into systems people can actually use.</p>
             <p>My experience spans business requirements, functional specifications, technical documentation, stakeholder coordination, web systems, and operational reporting. I bring an analytical mindset together with a practical understanding of how digital products are planned, documented, and supported.</p>
@@ -237,9 +307,9 @@
             <div class="facts">
               <div class="fact"><strong>3.82</strong><span>GPA / 4.00</span></div>
               <div class="fact"><strong>5+</strong><span>Technical documents*</span></div>
+              <div class="fact"><strong>4</strong><span>Websites Development</span></div>
               <div class="fact"><strong>30%</strong><span>Less code redundancy</span></div>
             </div>
-            <p style="font-size:9px;margin-top:12px;">*Across documented project work described in my CV.</p>
           </div>
         </div>
       </div>
@@ -254,7 +324,6 @@
           <article class="work-item reveal"><div class="work-no">03</div><div><div class="work-name">SIMAKIP Frontend Architecture</div><div class="work-type">Atomic Design · Frontend consistency · Research</div></div><div class="work-desc">Introduced a modular Atomic Design System to standardize digital products, reducing interface code redundancy by 30% and improving consistency.</div><div class="work-arrow">↗</div></article>
           <article class="work-item reveal"><div class="work-no">04</div><div><div class="work-name">M-KAS Digital System</div><div class="work-type">Web &amp; systems design · Cross-faculty project</div></div><div class="work-desc">Contributed as Web and Systems Designer to the initiation of a digital accounting management system through an Engineering and Business Economics collaboration.</div><div class="work-arrow">↗</div></article>
         </div>
-        <p class="work-footnote">Project descriptions are concise summaries of my CV. Detailed case studies and project links can be added when shareable materials are available.</p>
       </div>
     </section>
 
@@ -279,7 +348,7 @@
         <div class="cap-grid">
           <article class="cap reveal"><span class="cap-num">01 — ANALYZE</span><h3>System &amp; Business Analysis</h3><p>Structuring business needs into clear requirements and functional direction for digital systems.</p><div class="tags"><span class="tag">BRD</span><span class="tag">FSD</span><span class="tag">Requirements gathering</span><span class="tag">Business process mapping</span><span class="tag">SDLC</span></div></article>
           <article class="cap reveal"><span class="cap-num">02 — DOCUMENT</span><h3>Technical Documentation</h3><p>Making information accessible, consistent, and useful for project teams and stakeholders.</p><div class="tags"><span class="tag">SOP</span><span class="tag">User guides</span><span class="tag">Minutes of Meeting</span><span class="tag">IT audit fundamentals</span><span class="tag">Reporting</span></div></article>
-          <article class="cap reveal"><span class="cap-num">03 — DESIGN</span><h3>Product &amp; UI/UX</h3><p>Exploring user needs and translating ideas into structured interfaces and reusable components.</p><div class="tags"><span class="tag">Figma</span><span class="tag">Miro</span><span class="tag">Wireframes</span><span class="tag">Mockups</span><span class="tag">Atomic Design</span><span class="tag">HTML / CSS / JS</span></div></article>
+          <article class="cap reveal"><span class="cap-num">03 — DESIGN</span><h3>Product &amp; UI/UX</h3><p>Exploring user needs and translating ideas into structured interfaces and reusable components.</p><div class="tags"><span class="tag">Figma</span><span class="tag">Miro</span><span class="tag">Wireframes</span><span class="tag">Mockups</span><span class="tag">Atomic Design</span><span class="tag">Design Thinking</span><span class="tag">HTML / CSS / JS</span></div></article>
           <article class="cap reveal"><span class="cap-num">04 — SUPPORT</span><h3>Project &amp; Data Operations</h3><p>Supporting coordination, monitoring, reporting, and the operational flow of digital projects.</p><div class="tags"><span class="tag">Microsoft Office</span><span class="tag">SharePoint</span><span class="tag">Google Workspace</span><span class="tag">Trello</span><span class="tag">WordPress</span><span class="tag">Veyon</span></div></article>
         </div>
       </div>
